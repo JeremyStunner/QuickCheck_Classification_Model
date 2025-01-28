@@ -1,5 +1,5 @@
 import sys
-from Logger import logging
+from src.logger import logging
 
 def error_message_detail(error,error_details:sys):
     a,b,exc_tb = error_details.exc_info()
