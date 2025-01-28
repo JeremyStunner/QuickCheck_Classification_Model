@@ -1,0 +1,130 @@
+<html>
+<head></head>
+<body>
+    <div class="login">
+       <h1>Category Prediction</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Fill the Form Below</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Account_type</label>
+            <input class="form-control" type="number" name="Account_type"
+                placeholder="Enter your Account type" min='1' max='4' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Duration_of_Credit_month</label>
+            <input class="form-control" type="number" name="Duration_of_Credit_month"
+                placeholder="Enter your credit duration" min='1' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Payment_Status_of_Previous_Credit</label>
+            <input class="form-control" type="number" name="Payment_Status_of_Previous_Credit"
+                placeholder="Enter your payment status" min='0' max='4' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Purpose</label>
+            <input class="form-control" type="number" name="Purpose"
+                placeholder="Enter purpose" min='0' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Credit_Amount</label>
+            <input class="form-control" type="number" name="Credit_Amount"
+                placeholder="Enter credit amount" min='0' max='100000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Savings_type</label>
+            <input class="form-control" type="number" name="Savings_type"
+                placeholder="Enter savings type" min='1' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Length_of_current_employment</label>
+            <input class="form-control" type="number" name="Length_of_current_employment"
+                placeholder="Enter employment length" min='0' max='20' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Instalment_percent</label>
+            <input class="form-control" type="number" name="Instalment_percent"
+                placeholder= "Enter Instalment percent" min='1' max='4' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Marital_Status</label>
+            <input class="form-control" type="number" name="Marital_Status"
+                placeholder= "Enter Marital Status" min='1' max='4' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Guarantors</label>
+            <input class="form-control" type="number" name="Guarantors"
+                placeholder= "Enter Guarantors" min='1' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Duration_in_Current_address</label>
+            <input class="form-control" type="number" name="Duration_in_Current_address"
+                placeholder= "Enter Duration in Current address" min='1' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Most_valuable_available_asset</label>
+            <input class="form-control" type="number" name="Most_valuable_available_asset"
+                placeholder= "Enter valuable asset" min='1' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" name="Age"
+                placeholder= "Enter your age" min='18' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Concurrent_Credits</label>
+            <input class="form-control" type="number" name="Concurrent_Credits"
+                placeholder= "Enter Concurrent Credits" min='1' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Type_of_apartment</label>
+            <input class="form-control" type="number" name="Type_of_apartment"
+                placeholder= "Enter apartment type" min='1' max='3' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">No_of_Credits_at_this_Bank</label>
+            <input class="form-control" type="number" name="No_of_Credits_at_this_Bank"
+                placeholder= "Enter No of Credits at this Bank" min='1' max='4' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Occupation</label>
+            <input class="form-control" type="number" name="Occupation"
+                placeholder= "Enter your Occupation" min='1' max='4' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">No_of_dependents</label>
+            <input class="form-control" type="number" name="No_of_dependents"
+                placeholder= "Enter dependents" min='1' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Telephone</label>
+            <input class="form-control" type="number" name="Telephone"
+                placeholder= "Enter Telephone" min='1' max='2' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Foreign_Worker</label>
+            <input class="form-control" type="number" name="Foreign_Worker"
+                placeholder= "Enter Foreign Worker Status" min='1' max='2' />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Category Status" required />
+        </div>
+    </form>
+    <h2>
+       Your Category is {{ results }}
+    </h2>
+    <style>
+        .mb-3 {
+    margin: 10px 0; 
+    padding: 10px 20px;
+    border: none; 
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+        }
+    </style>
+   <body>
+</html>

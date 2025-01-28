@@ -27,26 +27,26 @@ class DataTransformation:
         
         '''
         try:
-            numerical_columns = ["Account type",
-                                 "Duration of Credit (month)",
-                                 "Payment Status of Previous Credit",
+            numerical_columns = ["Account_type",
+                                 "Duration_of_Credit_month",
+                                 "Payment_Status_of_Previous_Credit",
                                  "Purpose",
-                                 "Credit Amount",
-                                 "Savings type",
-                                 "Length of current employment",
-                                 "Instalment per cent",
-                                 "Marital Status",
+                                 "Credit_Amount",
+                                 "Savings_type",
+                                 "Length_of_current_employment",
+                                 "Instalment_percent",
+                                 "Marital_Status",
                                  "Guarantors",
-                                 "Duration in Current address",
-                                 "Most valuable available asset",
+                                 "Duration_in_Current_address",
+                                 "Most_valuable_available_asset",
                                  "Age",
-                                 "Concurrent Credits",
-                                 "Type of apartment",
-                                 "No of Credits at this Bank",
+                                 "Concurrent_Credits",
+                                 "Type_of_apartment",
+                                 "No_of_Credits_at_this_Bank",
                                  "Occupation",
-                                 "No of dependents",
+                                 "No_of_dependents",
                                  "Telephone",
-                                 "Foreign Worker"]
+                                 "Foreign_Worker"]
             
 
             num_pipeline= Pipeline(
@@ -88,26 +88,26 @@ class DataTransformation:
             preprocessing_obj=self.get_data_transformer_object()
 
             target_column_name="label"
-            numerical_columns = ["Account type",
-                                 "Duration of Credit (month)",
-                                 "Payment Status of Previous Credit",
+            numerical_columns = ["Account_type",
+                                 "Duration_of_Credit_month",
+                                 "Payment_Status_of_Previous_Credit",
                                  "Purpose",
-                                 "Credit Amount",
-                                 "Savings type",
-                                 "Length of current employment",
-                                 "Instalment per cent",
-                                 "Marital Status",
+                                 "Credit_Amount",
+                                 "Savings_type",
+                                 "Length_of_current_employment",
+                                 "Instalment_percent",
+                                 "Marital_Status",
                                  "Guarantors",
-                                 "Duration in Current address",
-                                 "Most valuable available asset",
+                                 "Duration_in_Current_address",
+                                 "Most_valuable_available_asset",
                                  "Age",
-                                 "Concurrent Credits",
-                                 "Type of apartment",
-                                 "No of Credits at this Bank",
+                                 "Concurrent_Credits",
+                                 "Type_of_apartment",
+                                 "No_of_Credits_at_this_Bank",
                                  "Occupation",
-                                 "No of dependents",
+                                 "No_of_dependents",
                                  "Telephone",
-                                 "Foreign Worker"]
+                                 "Foreign_Worker"]
 
             input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df=train_df[target_column_name]
